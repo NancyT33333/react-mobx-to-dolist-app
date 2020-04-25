@@ -5,7 +5,9 @@
   "scripts": {
     "start": "webpack-dev-server --hot --open",
     "build": "webpack",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "mockServe": "npx nodemon ./_mocks/index.js",
+    "localproxy": "lcp --proxyUrl http://localhost:8000/"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,6 @@
     "mobx",
     "starter-kit"
   ],
-  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mobxjs/mobx/issues"
   },
@@ -36,10 +36,18 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "local-cors-proxy": "^1.1.0",
     "mobx": "^5.0.3",
     "mobx-react": "^5.2.3",
     "mobx-react-devtools": "^6.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^5.1.2"
   }
 }
